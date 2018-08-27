@@ -14,7 +14,7 @@ DWORD WINAPI ThreadFunc(LPVOID lpParameter)	//this thread writes the data and si
 	static int i = 0;
 	cout<<"Entered thread GetCurrentThreadId = "<<GetCurrentThreadId()<<"serial number = "<<i++<<endl;
 	LeaveCriticalSection (&cSection);		// Release ownership of the critical section
-	WakeConditionVariable(&WriteCV);		// wake up the condition variable
+	WakeConditionVariable(&WriteCV);		// wake up the condition variable after critical section
 	return 1;
 }
 void main()
