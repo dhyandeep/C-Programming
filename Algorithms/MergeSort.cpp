@@ -56,10 +56,10 @@ int* MergeSort(int* arr, int start,int end)
 void main()
 {
 	int arr[] = {10, 5, 18, 9, 110, 17, 7, 20};
-    int size = sizeof(arr)/sizeof(arr[0]);
+	int size = sizeof(arr)/sizeof(arr[0]);
 	int* result = nullptr;
 	result = MergeSort(arr,0,size);
-    for(int i = 0;i<size;i++)
+	for(int i = 0;i<size;i++)
 	{
 		cout<<result[i]<<"\t";
 	}
