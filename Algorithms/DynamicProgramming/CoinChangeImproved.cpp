@@ -45,6 +45,7 @@ vector<int> FindChange(int coins[], int m, int V)
 	   }
 	   table[V].first = solArr[minIndex].size();
 	   table[V].second = (solArr[minIndex]);
+	   delete[] solArr;
    }
    
    return table[V].second;
@@ -54,14 +55,14 @@ vector<int> FindChange(int coins[], int m, int V)
 int main()
 {
 	int coins[] =  {100, 36, 10,2};
-	int V = 144;
+	int V = 8;
 	table = new pair<int,vector<int>>[V+1];
 	for(int i = 0;i <= V;i++)
 		table[i].first = INT_MAX;
     int m = sizeof(coins)/sizeof(coins[0]);
     
     vector<int> result =  FindChange(coins, m, V);
-    cout << "Minimum coins required is "<< result.size()<<endl;
+    cout << "Change = "<< result.size()<<endl;
     for(auto i:result)
     	cout<<i<<" ";
     return 0;
