@@ -1,7 +1,7 @@
 #include <iostream>
 #include <limits.h>
 #include <vector>
-#include <list>
+//#include <list>
 #include <map>
 using namespace std;
 pair<int,vector<int>> *table ;
@@ -65,5 +65,7 @@ int main()
     cout << "Change = "<< result.size()<<endl;
     for(auto i:result)
     	cout<<i<<" ";
+	if(table)
+		delete[] table;
     return 0;
 }
